@@ -9,7 +9,6 @@ struct Patient {
   int roomNumber;
   string disease;
   int age;
-  static const int MAX_PATIENTS = 10;
 };
 
 void ClearScreen() { system("cls"); }
@@ -21,8 +20,8 @@ void DisplayHeader(const string &headerTitle) {
 
 void DisplayMessage(const string &message) { cout << message << endl; }
 
-void AddPatient(Patient patients[], int &numPatients) {
-  if (numPatients >= Patient::MAX_PATIENTS) {
+void AddPatient(Patient patients[], int &numPatients, const int MAX_PATIENTS) {
+  if (numPatients >= MAX_PATIENTS) {
     DisplayMessage("Only 10 patients are allowed to register.");
     return;
   }
@@ -89,13 +88,14 @@ void UpdatePatient(Patient patients[], int numPatients) {
   }
 }
 
-void DeletePatient(Patient patients[], int &numPatients) {
+void DeletePatient(Patient patients[], int &numPatients,
+                   const int MAX_PATIENT) {
   string name;
   cout << "Enter the name of the patient to delete: ";
   getline(cin, name);
   int patientIndex = FindPatientByName(patients, numPatients, name);
   if (patientIndex != -1) {
-    for (int i = patientIndex; i < numPatients - 1; ++i) {
+    for (int i = patientIndex; i < MAX_PATIENT; ++i) {
       patients[i] = patients[i + 1];
     }
     numPatients--;
@@ -136,22 +136,25 @@ void DisplayMenu() {
 }
 
 int main() {
-  Patient patients[Patient::MAX_PATIENTS];
+  static const int MAX_PATIENTS = 10;
+
+  Patient patients[MAX_PATIENTS];
   int numPatients = 0;
   int choice;
+
   do {
     DisplayMenu();
     cin >> choice;
     cin.ignore();
     switch (choice) {
     case 1:
-      AddPatient(patients, numPatients);
+      AddPatient(patients, numPatients, MAX_PATIENTS);
       break;
     case 2:
       UpdatePatient(patients, numPatients);
       break;
     case 3:
-      DeletePatient(patients, numPatients);
+      DeletePatient(patients, numPatients, MAX_PATIENTS);
       break;
     case 4:
       DisplayPatients(patients, numPatients);
