@@ -7,7 +7,7 @@
   <a href="https://github.com/zyx-0314/">
     <img src="./assets/nyebe_logo_wt_250px.png" alt="Nyebe" width="130" height="130">
   </a>
-  <h3 align="center">C++ Patient Record Management System</h3>
+  <h3 align="center">C++ Patient Record Management System v.2</h3>
 </div>
 
 <div align="center">
@@ -44,7 +44,11 @@ This C++ console application is designed to **Manage Patient Records** efficient
 - **Patient Registration:** Allows users to add new patients by providing their name, age, and other relevant details.
 - **Patient Listing:** Displays a comprehensive list of all registered patients.
 - **Patient Update:** Enables users to modify the information of existing patients.
+- **Patient Delete:** Enables users to delete the information of existing patients.
 - **Clear and Intuitive Interface:** Provides a user-friendly menu-driven interface for easy navigation.
+
+### Roadmap
+1. Add comments <- Current: will be added on FEU TECH AITS
 
 ### Technology
 
@@ -56,3 +60,4 @@ This C++ console application is designed to **Manage Patient Records** efficient
 |----------------------------|-----------------------------------------------|---------------------------------------------|
 | C++ Documentation          | Reference for C++ language features           | https://cplusplus.com/doc/                  |
 | Linked List Implementation | Guide for implementing linked lists in C++     | https://www.geeksforgeeks.org/linked-list-in-cpp/ |
+
