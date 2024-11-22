@@ -18,6 +18,8 @@
 
 [![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/259a1016-852e-4df4-89c5-6bd5b53cc594.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/259a1016-852e-4df4-89c5-6bd5b53cc594)
 
+![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/DSA-Patient-Record-Management-System-v.2)
+
 ---
 
 <details>
